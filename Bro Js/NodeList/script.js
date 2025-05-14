@@ -1,7 +1,6 @@
 
 let buttons = document.querySelectorAll(".myButtons");
 
-console.log(buttons);
 
 buttons.forEach(button => {
     button.addEventListener("click", event => {
@@ -26,3 +25,16 @@ const newButton = document.createElement("button");
 newButton.textContent = "Button N";
 newButton.classList = "myButtons";
 document.body.appendChild(newButton);
+
+buttons = document.querySelectorAll(".myButtons");
+console.log(buttons);
+
+// Remove an element
+
+buttons.forEach(button => {
+    button.addEventListener("click", event =>{
+        event.target.remove();
+        buttons = document.querySelectorAll(".myButtons");
+        console.log(buttons);
+    })
+});
