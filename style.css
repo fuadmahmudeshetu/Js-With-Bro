@@ -1,0 +1,201 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@300;400;500;600&display=swap');
+ 
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+ }
+
+
+ body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#E9E9FF, #C8C7FF);
+ }
+
+ .container {
+    width: 900px;
+    padding: 32px;
+    position: relative;
+    border-radius: 23px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+ }
+
+ .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(134deg, #5c56e1,#8b5cf6);
+ }
+
+ .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ .header .logo-wrapper {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+ }
+
+ .header .logo-wrapper .logo {
+    height: 55px;
+    width: 56px;
+    display: flex;
+    color: white;
+    font-size: 1.35rem;
+    flex-shrink: 0;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(134deg, #5c56e1, #8b5cf6);
+ }
+
+ .header .logo-wrapper h1 {
+    font-size: 1.9rem;
+    font-weight: 700;
+ }
+
+ .header .theme-toggle {
+    height: 43px;
+    width: 43px;
+    border-radius: 50%;
+    font-size: 1.05rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f1ff;
+    border: 1px solid #d4d4ed;
+    transition: all 0.3s ease;
+ }
+
+ .theme-toggle:hover {
+    color: #5c56e1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+ }
+
+ .main-content {
+    margin:  35px 0 5px;
+ }
+
+ .main-content .prompt-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+ }
+
+ .prompt-container .prompt-input {
+    width: 100%;
+    resize: vertical;
+    line-height: 1.6;
+    font-size: 1.05rem;
+    min-height: 120px;
+    padding: 16px 20px;
+    border-radius: 15px;
+    background:#E9E9FF;
+    border: #d4d4ed;
+    transition: all 0.3s ease;
+ }
+
+  .prompt-container .prompt-input::placeholder {
+    color: #C8C7FF;
+  }
+
+  .prompt-container .prompt-input:focus {
+    outline: none;
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+  }
+
+  .prompt-container .theme-btn {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    height: 35px;
+    width: 35px;
+    border: none;
+    color: #fff;
+    font-size: 0.75rem;
+    border-radius: 50%;
+    opacity: 0.8;
+    cursor: pointer;
+    background: linear-gradient(134deg, #5c56e1, #8b5cf6);
+    transition: all 0.3s ease;
+  }
+
+  .prompt-container .theme-btn:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-content .prompt-actions {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: 1.2fr 1fr 1.1fr 1fr;
+  }
+
+  .prompt-actions .select-wrapper {
+    position: relative;
+
+  }
+
+  .prompt-actions .select-wrapper::after {
+    content: "";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    padding-left: 7px;
+    pointer-events: none;
+    background: #E9E9FF;
+    color: #d4d4ed;
+    transform: translateY(-50%);
+  }
+
+  .prompt-actions :where(.custom-select, .generate-btn){
+    cursor: pointer;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    background: #E9E9FF;
+    border: 1px solid #d4d4ed;
+  }
+
+  .prompt-actions .custom-select {
+    width: 100%;
+    outline: none;
+    height: 100%;
+    appearance: none;
+  }
+
+  .prompt-actions .generate-btn {
+    display: flex;
+    gap: 12px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 25px;
+    border: none;
+    color: #fff;
+    background: linear-gradient(134deg, #5c56e1, #8b5cf6);
+  }
+
+  .prompt-actions .generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(109, 40, 217, 0.3)
+  }

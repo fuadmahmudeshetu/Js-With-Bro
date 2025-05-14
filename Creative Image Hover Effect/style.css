@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #555;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background-color: black;
+    transition: all 0.5s;
+}
+
+.clip{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    
+    height: 100%;
+}
+.clip1{
+    background: url(Garden-salad-thumbnail-500x500.jpg);
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(0 0, 46% 0, 39% 100%, 0 100% );
+}
+.clip2{
+    background: url(healthy-cobb-salad-steps-sq-026.jpg);
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(19% 0, 87% 0, 64% 100%,33% 100%);
+}
+.clip3{
+    background: url(classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg);
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(82% 0, 100% 0,100% 100%,63% 100%);
+}
+
+.container:hover .clip {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%,100% 100%);
+}
+
+.container .clip:hover {
+    clip-path: polygon(0 0,100% 0, 100% 100%, 0 100%);
+}

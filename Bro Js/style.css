@@ -1,0 +1,15 @@
+/* #myImage{
+            margin-top: 20px;
+            width: 300px;
+            display: block;
+        } */
+
+#myCanvas {
+    border: 2px solid black;
+}
+#circle {
+    border: 2px solid black;
+}
+#text {
+    border: 2px solid black;
+}

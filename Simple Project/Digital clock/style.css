@@ -1,0 +1,26 @@
+body {
+    background-image: url(islamic-wallpaper-islam-6370761-1000-700.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+#clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#clock {
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+    font-size: 6rem;
+    color: white;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    background-color: hsla(0, 0%, 100%, 0.1);
+}
