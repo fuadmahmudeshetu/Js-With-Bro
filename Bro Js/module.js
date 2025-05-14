@@ -8,3 +8,4 @@ console.log(celsius);
 let fahrenheit = temp.celsiusToFahrenheit(100);
 console.log(fahrenheit);
 
+console.log(temp.PI);

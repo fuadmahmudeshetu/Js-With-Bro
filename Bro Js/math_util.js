@@ -9,4 +9,4 @@ export function fahrenheitToCelsius(fahrenheit){
     return 5.0/9*(fahrenheit-32);
 }
 
-
+export const PI = 3.1141956;
