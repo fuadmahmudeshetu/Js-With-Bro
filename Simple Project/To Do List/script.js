@@ -27,15 +27,32 @@ console.log(String(arr) === '1,2,3');
 console.log([] + 1); // "1"
 console.log([1] + 1); // "11"
 console.log([1, 2] + 1);
+
+let student = {
+    name: 'John',
+    age: 30,
+    isAdmin: false,
+    courses: ['html', 'css', 'js'],
+    spouse: null
+};
+
+let json = JSON.stringify(student);
+
+console.log(typeof json); // we've got a string!
+
+console.log(json);
 */
 
-let cart = [];
+let myCart = JSON.parse(localStorage.getItem('myCart')) || [];
 
 const inputElement = document.getElementById("inputText");
 const insertButton = document.getElementById("addButton");
 
 insertButton.addEventListener("click", ()=>{
     const element = inputElement.value;
-    cart.push(element);
-    console.log(cart);
+    myCart.push(element);
+    console.log(myCart);
+    localStorage.setItem('myCart', JSON.stringify(myCart));
 });
+
+console.log(myCart)
