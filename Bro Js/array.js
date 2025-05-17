@@ -39,18 +39,27 @@
 //     console.log(price)
 // }
 
-let fruits =     ["mangoes","banana","apple"];
-let vegetables = ["carrots","onions","potatoes"];
-let meats =      ["egg","chicken","fish"];
+// let fruits =     ["mangoes","banana","apple"];
+// let vegetables = ["carrots","onions","potatoes"];
+// let meats =      ["egg","chicken","fish"];
 
-let groceryList = [fruits, vegetables, meats];
+// let groceryList = [fruits, vegetables, meats];
 
-// console.log(groceryList);
+// // console.log(groceryList);
 
-groceryList[0][0] = "fuad"; // to change elements
+// groceryList[0][0] = "fuad"; // to change elements
 
-for(let list of groceryList){
-    for(let lis of list){
-        console.log(lis)
-    }
-}
+// for(let list of groceryList){
+//     for(let lis of list){
+//         console.log(lis)
+//     }
+// }
+
+
+let styles = ["Jazz", "Blues"]
+
+styles.push("Rock-n-Roll");
+styles[1] = "Classics";
+styles.shift();
+styles.unshift("Rap","Reggie");
+console.log(styles);
